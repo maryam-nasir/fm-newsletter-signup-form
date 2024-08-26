@@ -1,9 +1,31 @@
-function App() {
+import { useState, useRef } from "react";
+
+import SignupForm from "./components/SignupForm";
+import SuccessCard from "./components/SuccessCard";
+
+const App = () => {
+  const [showSuccessState, setShowSuccessState] = useState(true);
+  const email = useRef();
+
+  const handleDismiss = () => {
+    setShowSuccessState(false);
+    email.current = "";
+  };
+
+  const submitForm = (value) => {
+    email.current = value;
+    setShowSuccessState(true);
+  };
+
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      {showSuccessState ? (
+        <SuccessCard email={email.current} onDismiss={handleDismiss} />
+      ) : (
+        <SignupForm onSubmit={submitForm} />
+      )}
     </>
   );
-}
+};
 
 export default App;
