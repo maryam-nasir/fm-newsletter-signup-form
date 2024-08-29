@@ -4,7 +4,7 @@ import SignupForm from "./components/SignupForm";
 import SuccessCard from "./components/SuccessCard";
 
 const App = () => {
-  const [showSuccessState, setShowSuccessState] = useState(true);
+  const [showSuccessState, setShowSuccessState] = useState(false);
   const email = useRef();
 
   const handleDismiss = () => {
