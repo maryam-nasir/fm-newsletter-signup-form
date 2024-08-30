@@ -2,7 +2,8 @@ import { useMemo, useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import ListItem from "./ListItem";
-import signupIllustration from "../assets/images/illustration-sign-up-desktop.svg";
+import signupIllustrationDesktop from "../assets/images/illustration-sign-up-desktop.svg";
+import signupIllustrationMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import { isValidEmail } from "../utils";
 
 const SignupForm = ({ onSubmit }) => {
@@ -33,9 +34,11 @@ const SignupForm = ({ onSubmit }) => {
   }, [email, formTouched]);
 
   return (
-    <div className="bg-white w-[830px] rounded-[28px] p-5 flex items-center space-x-5">
+    <div className="bg-white max-sm:w-full max-sm:min-h-screen w-[830px] sm:rounded-[28px] sm:p-5 flex max-sm:flex-col-reverse items-center sm:space-x-5">
       <div className="p-6 flex-1">
-        <h1 className="font-bold text-5xl text-darkSlateGrey">Stay updated!</h1>
+        <h1 className="font-bold max-sm:text-4xl text-5xl text-darkSlateGrey">
+          Stay updated!
+        </h1>
 
         <p className="font-normal text-sm text-charcoalGrey my-5">
           Join 60,000+ product managers receiving monthly updates on:
@@ -68,8 +71,17 @@ const SignupForm = ({ onSubmit }) => {
           />
         </form>
       </div>
-      <div className="flex-1">
-        <img src={signupIllustration} alt="Sign up form illustration" />
+      <div className="sm:flex-1 max-sm:w-full max-sm:mb-6">
+        <img
+          src={signupIllustrationDesktop}
+          alt="Sign up form illustration"
+          className="max-sm:hidden"
+        />
+        <img
+          src={signupIllustrationMobile}
+          alt="Sign up form illustration"
+          className="sm:hidden w-full object-cover max-sm:max-h-[350px]"
+        />
       </div>
     </div>
   );
