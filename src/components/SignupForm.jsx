@@ -34,7 +34,7 @@ const SignupForm = ({ onSubmit }) => {
   }, [email, formTouched]);
 
   return (
-    <div className="bg-white max-sm:w-full max-sm:min-h-screen w-[830px] sm:rounded-[28px] sm:p-5 flex max-sm:flex-col-reverse items-center sm:space-x-5">
+    <section className="bg-white max-sm:w-full max-sm:min-h-screen w-[830px] sm:rounded-[28px] sm:p-5 flex max-sm:flex-col-reverse items-center sm:space-x-5">
       <div className="p-6 flex-1">
         <h1 className="font-bold max-sm:text-4xl text-5xl text-darkSlateGrey">
           Stay updated!
@@ -83,7 +83,7 @@ const SignupForm = ({ onSubmit }) => {
           className="sm:hidden w-full object-cover max-sm:max-h-[350px]"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

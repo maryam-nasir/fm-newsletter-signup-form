@@ -3,7 +3,7 @@ import successIcon from "../assets/images/icon-success.svg";
 
 const SuccessCard = ({ email, onDismiss }) => {
   return (
-    <div className="bg-white max-sm:w-full max-sm:min-h-screen w-[440px] sm:rounded-[28px] flex flex-col pt-10 px-[56px] max-sm:px-8 pb-12 max-sm:justify-between max-sm:pt-[200px]">
+    <section className="bg-white max-sm:w-full max-sm:min-h-screen w-[440px] sm:rounded-[28px] flex flex-col pt-10 px-[56px] max-sm:px-8 pb-12 max-sm:justify-between max-sm:pt-[200px]">
       <div>
         <div>
           <img
@@ -25,7 +25,7 @@ const SuccessCard = ({ email, onDismiss }) => {
       </div>
 
       <Button type="button" text="Dismiss message" onClick={onDismiss} />
-    </div>
+    </section>
   );
 };
 
