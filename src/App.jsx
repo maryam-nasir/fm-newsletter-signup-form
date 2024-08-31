@@ -1,13 +1,31 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState, useRef } from "react";
 
-function App() {
+import SignupForm from "./components/SignupForm";
+import SuccessCard from "./components/SuccessCard";
+
+const App = () => {
+  const [showSuccessState, setShowSuccessState] = useState(false);
+  const email = useRef();
+
+  const handleDismiss = () => {
+    setShowSuccessState(false);
+    email.current = "";
+  };
+
+  const submitForm = (value) => {
+    email.current = value;
+    setShowSuccessState(true);
+  };
+
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      {showSuccessState ? (
+        <SuccessCard email={email.current} onDismiss={handleDismiss} />
+      ) : (
+        <SignupForm onSubmit={submitForm} />
+      )}
     </>
   );
-}
+};
 
 export default App;
