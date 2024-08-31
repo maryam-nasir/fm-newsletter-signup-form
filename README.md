@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/maryam-nasir/fm-newsletter-signup-form](https://github.com/maryam-nasir/fm-newsletter-signup-form)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://fm-newsletter-signup-form.vercel.app/](https://fm-newsletter-signup-form.vercel.app/)
 
 ## My process
 
